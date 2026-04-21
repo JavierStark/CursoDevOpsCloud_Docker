@@ -298,6 +298,32 @@ docker exec -it web sh
 
 ---
 
+# Volumenes: persistencia de datos
+
+<div class="card good">
+  <h2>Demo de persistencia con web-data</h2>
+  <ul class="tiny">
+    <li>Crear volumen y levantar contenedor</li>
+    <li>Escribir index.html dentro del volumen</li>
+    <li>Borrar y recrear contenedor</li>
+    <li>Verificar que el contenido sigue disponible</li>
+  </ul>
+</div>
+
+```bash
+docker volume create web_html
+docker run -d --name web-data -p 8081:80 -v web_html:/usr/share/nginx/html nginx:alpine
+
+docker rm -f web-data
+
+docker volume ls
+docker inspect web-data --format '{{ json .Mounts }}'
+```
+
+<p class="footer-note"><strong>Idea clave:</strong> el contenedor es efimero, el dato vive en el volumen.</p>
+
+---
+
 # Dockerfile desde cero
 
 <p class="tiny">Un Dockerfile es una receta reproducible. Cada instrucción crea una capa.</p>
