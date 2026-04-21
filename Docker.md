@@ -184,25 +184,34 @@ style: |
 
 ---
 
-# Arquitectura de Docker
+# Caso Real: COMPÁS VIRTUAL se cae
 
-<div class="flow">
-  <strong>CLI</strong> (<code>docker ...</code>)
-  <span class="accent"> -> </span>
-  <strong>Docker Engine API</strong>
-  <span class="accent"> -> </span>
-  <strong>Docker Daemon</strong>
-  <span class="accent"> -> </span>
-  <strong>Containers / Images / Volumes / Networks</strong>
+<div class="cols">
+  <div class="card bad">
+    <h2>⚠️ Crisis sin Docker</h2>
+    <ul class="tiny">
+      <li>Página caída 🔴</li>
+      <li>SSH a servidor</li>
+      <li>Revisar logs, configs</li>
+      <li>¿Qué versión de Node?</li>
+      <li>¿Qué commit del código?</li>
+      <li>30 min sin servicio 📉</li>
+    </ul>
+  </div>
+  <div class="card good">
+    <h2>✅ Respuesta con Docker</h2>
+    <ul class="tiny">
+      <li>Página caída 🔴</li>
+      <li><code>docker run compas-virtual</code></li>
+      <li>✅ Instancia 2 levantada</li>
+      <li>Servicio restaurado (5s)</li>
+      <li>O replicar en 3 servidores</li>
+      <li>Load balancer distribuye</li>
+    </ul>
+  </div>
 </div>
 
-<div class="flow">
-  <strong>Daemon</strong>
-  <span class="accent"> <-> </span>
-  <strong>Registry</strong> (<code>Docker Hub</code>) para <code>pull</code> y <code>push</code>
-</div>
-
-<p class="footer-note">Piensa en Docker como una <strong>fabrica + gestor</strong> de entornos aislados.</p>
+<p class="footer-note"><strong>La imagen es tu backup vivo:</strong> instancia múltiples contenedores cuando sea necesario.</p>
 
 ---
 
@@ -236,6 +245,28 @@ style: |
 </div>
 
 <p class="footer-note">Una imagen puede generar <strong>N contenedores simultáneos</strong>, cada uno con su estado aislado.</p>
+
+---
+
+# Arquitectura de Docker
+
+<div class="flow">
+  <strong>CLI</strong> (<code>docker ...</code>)
+  <span class="accent"> -> </span>
+  <strong>Docker Engine API</strong>
+  <span class="accent"> -> </span>
+  <strong>Docker Daemon</strong>
+  <span class="accent"> -> </span>
+  <strong>Containers / Images / Volumes / Networks</strong>
+</div>
+
+<div class="flow">
+  <strong>Daemon</strong>
+  <span class="accent"> <-> </span>
+  <strong>Registry</strong> (<code>Docker Hub</code>) para <code>pull</code> y <code>push</code>
+</div>
+
+<p class="footer-note">Piensa en Docker como una <strong>fabrica + gestor</strong> de entornos aislados.</p>
 
 ---
 
