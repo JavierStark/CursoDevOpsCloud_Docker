@@ -7,7 +7,7 @@ Nuestra aplicación anteriormente funcionaba perfectamente, pero ayer un usuario
 Para entender cómo funciona nuestra aplicación por dentro necesitamos saber que el stack es bastante completo, usamos Python, Node.js, .NET, con Redis para la comunicación and Postgres para almacenar nuestro datos. El diagrama donde representemos a todos los servicios y a ti (si hij@, eres ese monigote), nos quedaría tal que así: 
 
 <p align="center">
-<img src="architecture.excalidraw">
+<img src="architecture.excalidraw.png">
 </p>
 
 ## Fase 1: Creación de un `Dockerfile`.
