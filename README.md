@@ -13,9 +13,9 @@ Esta sesión inicial sienta las bases del curso explicando la diferencia entre a
 - Docker Desktop
 - Docker Compose
 
-### Ponente
+### Invitado
 **Iñaki Respaldiza** - Organizador Docker Sevilla  
 LinkedIn: https://www.linkedin.com/in/irespaldiza/
 
-### Requisitos del Curso
+### Requisitos de la sesión
 - Docker Desktop instalado
