@@ -395,7 +395,7 @@ curl http://localhost:3000/health
 
 ---
 
-# Cierre de la sesión
+# Fin del taller
 
 ## Lo que ya puedes hacer hoy
 
