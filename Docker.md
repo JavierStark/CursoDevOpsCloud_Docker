@@ -206,6 +206,39 @@ style: |
 
 ---
 
+# Imagen vs. Contenedor
+
+<div class="cols">
+  <div class="card">
+    <h2>🖼️ Imagen</h2>
+    <ul class="tiny">
+      <li><strong>Plantilla</strong> estática inmutable</li>
+      <li>Capas comprimidas en un archivo</li>
+      <li>Se construye una vez</li>
+      <li><code>docker build</code></li>
+      <li>Se descarga de Registry</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>📦 Contenedor</h2>
+    <ul class="tiny">
+      <li><strong>Instancia</strong> ejecutable viva</li>
+      <li>Copia de lectura-escritura de la imagen</li>
+      <li>Múltiples contenedores de la misma imagen</li>
+      <li><code>docker run</code></li>
+      <li>Procesos en ejecución</li>
+    </ul>
+  </div>
+</div>
+
+<div class="flow">
+<strong>Analógía:</strong> Imagen = <span class="accent">Clase</span> / Contenedor = <span class="accent">Instancia</span> de esa clase
+</div>
+
+<p class="footer-note">Una imagen puede generar <strong>N contenedores simultáneos</strong>, cada uno con su estado aislado.</p>
+
+---
+
 # Dominio de la CLI y Docker Desktop
 
 <div class="cols">
