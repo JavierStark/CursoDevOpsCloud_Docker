@@ -429,4 +429,4 @@ curl http://localhost:3000/health
 - Levantar un stack local con Compose.
 - Aplicar buenas practicas desde el primer dia.
 
-![bg right:36% 85%](CartelCursoDevopsCloud.png)
+![bg right:36% 85%](FormularioFeedback.png)
