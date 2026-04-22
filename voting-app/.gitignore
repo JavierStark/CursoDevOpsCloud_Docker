@@ -4,5 +4,3 @@ bin/
 obj/
 .vs/
 node_modules/
-docker-compose.yml
-vote/Dockerfile
