@@ -159,31 +159,6 @@ style: |
 
 ---
 
-# Aislamiento vs. Virtualización Tradicional
-
-<div class="cols">
-  <div class="card bad">
-    <h2>Virtualización (VM)</h2>
-    <ul>
-      <li>SO completo por instancia</li>
-      <li>Arranque más lento</li>
-      <li>Mayor consumo de RAM/CPU</li>
-    </ul>
-  </div>
-  <div class="card good">
-    <h2>Contenedores (Docker)</h2>
-    <ul>
-      <li>Kernel compartido</li>
-      <li>Inicio en segundos</li>
-      <li>Portables y ligeros</li>
-    </ul>
-  </div>
-</div>
-
-<p class="footer-note"><span class="accent">Idea clave:</span> Docker empaqueta aplicación + dependencias, no un sistema operativo completo.</p>
-
----
-
 # Caso Real: COMPÁS VIRTUAL se cae
 
 <div class="cols">
@@ -212,6 +187,31 @@ style: |
 </div>
 
 <p class="footer-note"><strong>La imagen es tu backup vivo:</strong> instancia múltiples contenedores cuando sea necesario.</p>
+
+---
+
+# Aislamiento vs. Virtualización Tradicional
+
+<div class="cols">
+  <div class="card bad">
+    <h2>Virtualización (VM)</h2>
+    <ul>
+      <li>SO completo por instancia</li>
+      <li>Arranque más lento</li>
+      <li>Mayor consumo de RAM/CPU</li>
+    </ul>
+  </div>
+  <div class="card good">
+    <h2>Contenedores (Docker)</h2>
+    <ul>
+      <li>Kernel compartido</li>
+      <li>Inicio en segundos</li>
+      <li>Portables y ligeros</li>
+    </ul>
+  </div>
+</div>
+
+<p class="footer-note"><span class="accent">Idea clave:</span> Docker empaqueta aplicación + dependencias, no un sistema operativo completo.</p>
 
 ---
 
@@ -245,28 +245,6 @@ style: |
 </div>
 
 <p class="footer-note">Una imagen puede generar <strong>N contenedores simultáneos</strong>, cada uno con su estado aislado.</p>
-
----
-
-# Arquitectura de Docker
-
-<div class="flow">
-  <strong>CLI</strong> (<code>docker ...</code>)
-  <span class="accent"> -> </span>
-  <strong>Docker Engine API</strong>
-  <span class="accent"> -> </span>
-  <strong>Docker Daemon</strong>
-  <span class="accent"> -> </span>
-  <strong>Containers / Images / Volumes / Networks</strong>
-</div>
-
-<div class="flow">
-  <strong>Daemon</strong>
-  <span class="accent"> <-> </span>
-  <strong>Registry</strong> (<code>Docker Hub</code>) para <code>pull</code> y <code>push</code>
-</div>
-
-<p class="footer-note">Piensa en Docker como una <strong>fabrica + gestor</strong> de entornos aislados.</p>
 
 ---
 
@@ -321,6 +299,28 @@ docker inspect web-data --format '{{ json .Mounts }}'
 ```
 
 <p class="footer-note"><strong>Idea clave:</strong> el contenedor es efimero, el dato vive en el volumen.</p>
+
+---
+
+# Arquitectura de Docker
+
+<div class="flow">
+  <strong>CLI</strong> (<code>docker ...</code>)
+  <span class="accent"> -> </span>
+  <strong>Docker Engine API</strong>
+  <span class="accent"> -> </span>
+  <strong>Docker Daemon</strong>
+  <span class="accent"> -> </span>
+  <strong>Containers / Images / Volumes / Networks</strong>
+</div>
+
+<div class="flow">
+  <strong>Daemon</strong>
+  <span class="accent"> <-> </span>
+  <strong>Registry</strong> (<code>Docker Hub</code>) para <code>pull</code> y <code>push</code>
+</div>
+
+<p class="footer-note">Piensa en Docker como una <strong>fabrica + gestor</strong> de entornos aislados.</p>
 
 ---
 

@@ -1,0 +1,7 @@
+# docker compose up -d --scale ubuntu=50
+services:
+  ubuntu:
+    image: ubuntu:24.04
+    command: ["sleep", "infinity"]
+    tty: true
+    restart: unless-stopped
